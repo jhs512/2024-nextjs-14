@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -10,8 +12,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body className={inter.className}>
+        <div className="flex gap-2">
+          <Link href="/">홈</Link>
+          <Link href="/about">어바웃</Link>
+          <Link href="/pf">포트폴리오</Link>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }
