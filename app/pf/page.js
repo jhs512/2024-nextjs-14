@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Pf() {
   return (
     <div className="text-blue-500">
       <div className="flex gap-2">
@@ -9,7 +9,7 @@ export default function Home() {
 
       <hr />
 
-      <h1>홈</h1>
+      <h1>포트폴리오</h1>
     </div>
   );
 }
