@@ -1,9 +1,15 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import localFont from "next/font/local";
+
+const pretendard = localFont({
+  src: "./../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -12,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
-      <body className={inter.className}>
+    <html lang="kr" className={`${pretendard.variable}`}>
+      <body className={pretendard.className}>
         <div className="flex gap-2">
           <Link href="/">홈</Link>
           <Link href="/about">어바웃</Link>
